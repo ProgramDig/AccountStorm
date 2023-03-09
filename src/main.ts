@@ -8,7 +8,6 @@ import roleRouter from "./router/role.router.js";
 
 import { ProcessEnv } from "./interfaces/main.js";
 
-
 dotenv.config();
 const {PORT, DB_CONNECTION}: ProcessEnv = process.env;
 const app = express();
