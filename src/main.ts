@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 
 import authRouter from "./router/auth.router.js";
 import roleRouter from "./router/role.router.js";
+import itemRouter from "./router/item.router.js";
 
 import { ProcessEnv } from "./interfaces/main.js";
 
@@ -14,8 +15,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/auth", authRouter);
 app.use("/api/role", roleRouter);
+app.use("/api/item", itemRouter)
 
 const start = async () => {
   try {

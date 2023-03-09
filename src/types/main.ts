@@ -33,7 +33,7 @@ export type AccessToken = {
   accessToken: string
 }
 
-export type IdDO = {
+export type IdItem = {
   _id: string
 }
 
