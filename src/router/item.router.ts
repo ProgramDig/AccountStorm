@@ -10,10 +10,10 @@ import { ROLES } from "../enums/main.js";
 const router = express.Router();
 const {ADMIN} = ROLES;
 
-// item routes
-router.post("/item", roleMiddleware(ADMIN), validation, itemController.createItem);
-router.patch("/item", roleMiddleware(ADMIN), validation, itemController.updateItem);
-router.get("/item",  itemController.getItems);
-router.delete("/item", roleMiddleware(ADMIN), itemController.deleteItem);
+// path /api/item
+router.post("/", roleMiddleware(ADMIN), validation, itemController.createItem);
+router.patch("/", roleMiddleware(ADMIN), validation, itemController.updateItem);
+router.get("/",  itemController.getItems);
+router.delete("/", roleMiddleware(ADMIN), itemController.deleteItem);
 
 export default router;

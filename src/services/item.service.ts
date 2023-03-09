@@ -4,26 +4,26 @@ import { Item } from "../interfaces/main.js";
 import { IdItem } from "../types/main.js";
 
 class ItemService {
-  // create destract object
+  // create item
   async createItem(values: Item) {
     try {
-      const destractObject = new ItemModel({ ...values });
-      await destractObject.save();
+      const item = new ItemModel({ ...values });
+      await item.save();
     } catch (error) {
       const { message }: any = error;
-      throw new Error(`Помилка створення об'єкта руйнації. ${message}`);
+      throw new Error(`Помилка створення запису. ${message}`);
     }
   }
-  // get destract object list
+  // get items
   async getItems() {
     try {
       return await ItemModel.find();
     } catch (error) {
       const { message }: any = error;
-      throw new Error(`Помилка взяття масиву об'єктів з бази. ${message}`);
+      throw new Error(`Помилка взяття записів. ${message}`);
     }
   }
-  // update destract object
+  // update item
   async updateItem(values: Item) {
     try {
       const _id = values._id;
@@ -38,7 +38,7 @@ class ItemService {
       throw new Error(message);
     }
   }
-  // delete destract object
+  // delete item
   async deleteItem(_id: IdItem) {
     try {
       const dbResponse = await ItemModel.findOne({ _id });
