@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/role", roleRouter);
 app.use("/api/item", itemRouter);
-app.use("/api/admin", adminRouter)
+app.use("/api/admin", adminRouter);
 
 const start = async () => {
   try {
