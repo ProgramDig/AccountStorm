@@ -14,11 +14,14 @@ const Chart = () => {
     { name: "Сесія Є", uv: 0, pv: 2400, amt: 2400 },
     { name: "Сесія Ж", uv: count, pv: 2400, amt: 2400 },
   ];
+
   useEffect(() => {
     if (count === 2) {
       if (localStorage.getItem("count")) {
         // @ts-ignore
         setCount(Number.parseInt(localStorage.getItem("count")));
+      } else {
+        console.log("Item count in undefined.")
       }
     }
     setCount(prevState => prevState + 1);

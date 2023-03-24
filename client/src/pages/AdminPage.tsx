@@ -40,16 +40,16 @@ const AdminPage = () => {
       <div className="row">
         <div className="col s12" style={{ marginTop: 25 }}>
           <div className="col">
-            <button disabled={loading} className={"btn orange darken-1"} onClick={loadDataHandler}>Оновити дані</button>
+            <button disabled={loading} className={"btn orange waves-effect waves-light  darken-1"} onClick={loadDataHandler}>Оновити дані</button>
           </div>
           <div className="col">
-            <button disabled={loading} className={"btn orange darken-1"} onClick={() => setPage(0)}>Таблиця</button>
+            <button disabled={loading} className={"btn orange waves-effect waves-light  darken-1"} onClick={() => setPage(0)}>Таблиця</button>
           </div>
           <div className="col">
-            <button disabled={loading} className={"btn orange darken-1"} onClick={() => setPage(1)}>Створити</button>
+            <button disabled={loading} className={"btn orange waves-effect waves-light  darken-1"} onClick={() => setPage(1)}>Створити</button>
           </div>
           <div className="col">
-            <button disabled={true} className={"btn orange darken-1"} onClick={generateDocx}>Перенести у word</button>
+            <button disabled={true} className={"btn orange waves-effect waves-light  darken-1"} onClick={generateDocx}>Перенести у word</button>
           </div>
         </div>
 
