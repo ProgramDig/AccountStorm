@@ -6,7 +6,7 @@ const initialState: any = {
 };
 
 const itemSlice = createSlice({
-  name: "destractObjects",
+  name: "items",
   initialState,
   reducers: {
     setItems(state, action) {
